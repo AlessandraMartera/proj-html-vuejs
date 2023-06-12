@@ -12,7 +12,7 @@ export default {
     <nav>
       <!-- logo -->
       <div class="logo">
-        <img src="./../assets/image/dark-logo.png" alt="">
+        <img src="dark-logo.png" alt="">
       </div>
       <!-- links list -->
       <ul>
@@ -35,14 +35,30 @@ export default {
 
     <!-- Jumbotron -->
     <div id="jumbotron">
-    </div>
 
+      <div class="hero_immage_left">
+        <img id="color_artist" src="hero/artist-hero-image-02-232x300.jpg" alt="">
+        <img id="monkey_artist" src="hero/artist-hero-image-01.jpg" alt="">
+
+      </div>
+
+      <div class="text">
+        <div>Hello, I'm Martin</div>
+        <h1>Aritst Coaching And Mentoring Might Be for You.</h1>
+        <button>Get started today</button>
+      </div>
+
+      <div class="hero_immage_right">
+        <img id="photo_artist" src="hero/artist-hero-image-04.jpg" alt="">
+      </div>
+
+    </div>
 
   </header>
 </template>
 
 <style lang="scss" scoped>
-@use './../styles/general.scss' as *;
+// @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
 
 // DEBUG
@@ -76,11 +92,62 @@ nav {
   }
 }
 
-
-
-// DeBUG
 #jumbotron {
-  height: 800px;
-  background-color: bisque;
+  background-color: #fbf9f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 650px;
+
+}
+
+.hero_immage_left {
+  border: 1px dotted black;
+  width: 25%;
+  height: 80%;
+  position: relative;
+
+  #color_artist {
+    position: absolute;
+    top: 0;
+    right: 2px;
+
+  }
+
+  #monkey_artist {
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+  }
+
+}
+
+.text {
+  width: 40%;
+  text-align: center;
+
+  div {
+    color: $lightblue;
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.hero_immage_right {
+  width: 25%;
+  height: 80%;
+  position: relative;
+
+  #photo_artist {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scale: 0.9;
+  }
 }
 </style>
