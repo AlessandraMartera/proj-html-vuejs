@@ -1,8 +1,11 @@
 <script >
-
+import AppNewsletter from './AppNewsletter.vue';
 
 export default {
-    name: 'PageMain'
+    name: 'PageMain',
+    components: {
+        AppNewsletter,
+    },
 }
 </script>
 
@@ -165,12 +168,8 @@ export default {
         </div>
     </section>
 
-    <section class="newsletter">
-        <div class="center_container">
-            <h2>newsletter to get in touch</h2>
-            <input type="email">
-        </div>
-    </section>
+
+    <AppNewsletter />
 </template>
 
 <style lang="scss" scoped>
@@ -207,11 +206,5 @@ export default {
 // TESTIMONIAL
 .carousel {
     display: flex;
-}
-
-// NEWSLETTER
-.newsletter {
-    height: 200px;
-    background-color: #244186;
 }
 </style>
