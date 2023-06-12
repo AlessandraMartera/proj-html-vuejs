@@ -1,5 +1,29 @@
+@use './partials/variables.scss' as *;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 1.3rem;
+    color: $black;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: $orange;
+    border: none;
+    border-radius: 5px;
+    color: $white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: $lightblue;
 }
