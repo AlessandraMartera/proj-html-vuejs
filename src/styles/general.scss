@@ -1,4 +1,5 @@
 @use './partials/variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kablammo&display=swap');
 
 * {
     margin: 0;
@@ -13,6 +14,8 @@ body {
 
 ul {
     list-style: none;
+    display: flex;
+    gap: 5px;
 }
 
 button {
@@ -28,4 +31,10 @@ button {
 button:hover {
     cursor: pointer;
     background-color: $lightblue;
+}
+
+.center_container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
 }

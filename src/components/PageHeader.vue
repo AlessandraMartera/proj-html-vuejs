@@ -77,7 +77,6 @@ nav {
   }
 
   ul {
-    display: flex;
     gap: 5px;
 
     i {
@@ -103,7 +102,6 @@ nav {
 }
 
 .hero_immage_left {
-  border: 1px dotted black;
   width: 25%;
   height: 80%;
   position: relative;
@@ -131,6 +129,7 @@ nav {
     color: $lightblue;
     margin-bottom: 10px;
     font-size: 50px;
+    font-family: $handwrite;
   }
 
   h1 {
