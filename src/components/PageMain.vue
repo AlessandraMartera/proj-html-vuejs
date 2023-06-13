@@ -4,7 +4,7 @@ import AppHelpYou from './AppHelpYou.vue';
 import AppGetStartToday from './AppGetStartToday.vue';
 import AppVideo from './AppVideo.vue';
 import AppCarousel from './AppCarousel.vue';
-
+import AppCoursesList from './AppCoursesList.vue';
 export default {
     name: 'PageMain',
     components: {
@@ -13,6 +13,7 @@ export default {
         AppGetStartToday,
         AppVideo,
         AppCarousel,
+        AppCoursesList,
     },
 }
 </script>
@@ -41,18 +42,7 @@ export default {
                     <AppCarousel />
                 </section>
 
-                <section class="courses_list">
-                    <div class="center_container">
-                        <div class="handwrite_blu">Artist Coaching</div>
-                        <h1>titolo</h1>
-                        <ul>
-                            <li> card dei corse</li>
-                        </ul>
-                        <button class="buttonlight">
-                            view all courses
-                        </button>
-                    </div>
-                </section>
+                <AppCoursesList />
 
                 <section class="from_blog">
                     <div class="center_container">
@@ -97,7 +87,7 @@ export default {
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-// @use './../styles/debug.scss' as *;
+@use './../styles/debug.scss' as *;
 
 main {
     .background {
