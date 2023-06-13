@@ -1,51 +1,20 @@
 <script >
 import AppNewsletter from './AppNewsletter.vue';
+import AppHelpYou from './AppHelpYou.vue';
 
 export default {
     name: 'PageMain',
     components: {
+        AppHelpYou,
         AppNewsletter,
     },
 }
 </script>
 
 <template>
-    <section class="help_you">
-        <div class="center_container">
-            <span>scritta blu</span>
-            <h1>titolo</h1>
-            <ul>
-                <li>
-                    <img src="#" alt="immgine">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas vero, perspiciatis fuga,
-                        exercitationem ipsa asperiores amet ipsam quia distinctio porro, officiis veniam dolores animi nisi
-                        nam architecto possimus omnis culpa!
-                    </p>
-                </li>
-                <li>
-                    <img src="#" alt="immgine">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas vero, perspiciatis fuga,
-                        exercitationem ipsa asperiores amet ipsam quia distinctio porro, officiis veniam dolores animi nisi
-                        nam architecto possimus omnis culpa!
-                    </p>
-                </li>
-                <li>
-                    <img src="#" alt="immgine">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas vero, perspiciatis fuga,
-                        exercitationem ipsa asperiores amet ipsam quia distinctio porro, officiis veniam dolores animi nisi
-                        nam architecto possimus omnis culpa!
-                    </p>
-                </li>
-                <li>
-                    <img src="#" alt="immgine">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas vero, perspiciatis fuga,
-                        exercitationem ipsa asperiores amet ipsam quia distinctio porro, officiis veniam dolores animi nisi
-                        nam architecto possimus omnis culpa!
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <AppHelpYou />
+
+
 
     <section class="get_start_today">
         <div class="center_container">
@@ -54,9 +23,8 @@ export default {
                 <h1>
                     titolo
                 </h1>
-                <span>
-                    scrittta blu
-                </span>
+                <div class="handwrite_blu">Martin Garrix</div>
+
             </div>
             <div>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab velit, fugit numquam adipisci aperiam dicta
@@ -81,7 +49,7 @@ export default {
     <section class="testimonials">
 
         <div class="center_container">
-            <span>scritta blu</span>
+            <div class="handwrite_blu">Testimonials</div>
 
             <h1>Why people love me?</h1>
 
@@ -126,7 +94,7 @@ export default {
 
     <section class="courses_list">
         <div class="center_container">
-            <span>scitta blu </span>
+            <div class="handwrite_blu">Artist Coaching</div>
             <h1>titolo</h1>
             <ul>
                 <li> card dei corse</li>
@@ -139,6 +107,7 @@ export default {
 
     <section class="from_blog">
         <div class="center_container">
+            <div class="handwrite_blu">Articols and Tips</div>
             <div>lato sinistro</div>
             <div>big</div>
             <div>lato destro</div>
@@ -147,7 +116,7 @@ export default {
 
     <section class="upcoming_events">
         <div class="center_container">
-            <span>scitta blu </span>
+            <div class="handwrite_blu">Upcoming Events</div>
             <h1>titolo</h1>
             <div>
                 <div class="card_events">

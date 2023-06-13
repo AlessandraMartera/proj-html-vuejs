@@ -43,7 +43,7 @@ export default {
       </div>
 
       <div class="text">
-        <div>Hello, I'm Martin</div>
+        <div class="handwrite_blu">Hello, I'm Martin</div>
         <h1>Aritst Coaching And Mentoring Might Be for You.</h1>
         <button>Get started today</button>
       </div>
@@ -128,12 +128,6 @@ nav {
   width: 40%;
   text-align: center;
 
-  div {
-    color: $lightblue;
-    margin-bottom: 10px;
-    font-size: 50px;
-    font-family: $handwrite;
-  }
 
   h1 {
     margin-bottom: 30px;
