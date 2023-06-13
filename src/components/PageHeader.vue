@@ -122,6 +122,9 @@ nav {
 }
 
 .text {
+  // font-family: 'Varela Round', sans-serif;
+  font-weight: 800;
+  // font-size: 16px;
   width: 40%;
   text-align: center;
 

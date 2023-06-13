@@ -15,7 +15,10 @@ export default {
 
 <template>
   <PageHeader />
-  <PageMain />
+  <main>
+    <PageMain />
+  </main>
+
   <PageFooter />
 </template>
 
