@@ -2,58 +2,58 @@ import { reactive } from 'vue'
 
 export const store = reactive({
     linksHader: ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
-    onlineCourses: [
+    Courses: [
         {
-            img: 'artist-course-08-480x480.jpg',
+            img: 'courses/artist-course-08-480x480.jpg',
             name: 'The acrylic Painting Academy',
             price: 18.00,
             numberLessons: 4,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-07-480x480.jpg',
+            img: 'courses/artist-course-07-480x480.jpg',
             name: 'Drawing and Shading Complete Course',
             price: 21.00,
             numberLessons: 14,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-06-480x480.jpg',
+            img: 'courses/artist-course-06-480x480.jpg',
             name: 'The Color Theory for Difital Artist',
             price: 19.00,
             numberLessons: 7,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-05-480x480.jpg',
+            img: 'courses/artist-course-05-480x480.jpg',
             name: 'Ultimate Guide to Digital Sketching for Beginner',
             price: 35.00,
             numberLessons: 14,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-04-480x480.jpg',
+            img: 'courses/artist-course-04-480x480.jpg',
             name: 'Portrait Drawing The Smart Way',
             price: 19.00,
             numberLessons: 2,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-03-480x480.jpg',
+            img: 'courses/artist-course-03-480x480.jpg',
             name: 'Mastering Watercoler Painting from Beginner',
             price: 19.00,
             numberLessons: 9,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-02-480x480.jpg',
+            img: 'courses/artist-course-02-480x480.jpg',
             name: 'The Art & Science of Drawing',
             price: 25.00,
             numberLessons: 4,
             numeberStudent: 50,
         },
         {
-            img: 'artist-course-01-480x480.jpg',
+            img: 'courses/artist-course-01-480x480.jpg',
             name: 'The Colored Pencil Drawing Course',
             price: 22.00,
             numberLessons: 6,

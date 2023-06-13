@@ -1,8 +1,11 @@
 <script >
 import { store } from './../store.js'
-
+import CoursesCard from './CoursesCard.vue';
 export default {
     name: 'AppCoursesList',
+    components: {
+        CoursesCard,
+    },
     // store data
     data() {
         return {
@@ -15,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <section class="courses_list">
+    <section class="courses">
 
         <div class="center_container">
 
@@ -23,12 +26,10 @@ export default {
             <div class="handwrite_blu">Artist Coaching</div>
             <h1>Latest online Courses</h1>
 
-            <ul>
-                <!--  cards courses -->
-                <!-- v-for -->
-                <li>
-                    <img src="" alt="">
-                </li>
+            <ul class="courses_list">
+
+                <CoursesCard />
+
             </ul>
 
             <button class="buttonlight">
@@ -43,8 +44,17 @@ export default {
 @use './../styles/partials/variables.scss' as *;
 @use './../styles/debug.scss' as *;
 
-.courses_list {
+.courses {
     text-align: center;
+
+    .courses_list {
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
 }
 </style>
 
