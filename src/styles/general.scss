@@ -48,6 +48,18 @@ button:hover {
     background-color: $lightblue;
 }
 
+.buttonlight {
+    background-color: #fdf0ea;
+    color: $orange;
+    width: 200px;
+}
+
+.buttonlight:hover {
+    background-color: #eaecfd;
+    color: $blue;
+    width: 200px;
+}
+
 .handwrite_blu {
     color: $lightblue;
     margin-bottom: 10px;

@@ -1,150 +1,177 @@
 <script >
 import AppNewsletter from './AppNewsletter.vue';
 import AppHelpYou from './AppHelpYou.vue';
+import AppGetStartToday from './AppGetStartToday.vue';
 
 export default {
     name: 'PageMain',
     components: {
         AppHelpYou,
         AppNewsletter,
+        AppGetStartToday,
     },
 }
 </script>
 
 <template>
-    <AppHelpYou />
+    <main>
+        <div class="background">
+
+
+            <img class="shape_03" src="background/maxcoach-shape-14-1536x343.png" alt="">
 
 
 
-    <section class="get_start_today">
-        <div class="center_container">
-            <div>
-                <img src="#" alt="virgolette">
-                <h1>
-                    titolo
-                </h1>
-                <div class="handwrite_blu">Martin Garrix</div>
+            <div class="content">
+                <AppHelpYou />
 
-            </div>
-            <div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab velit, fugit numquam adipisci aperiam dicta
-                placeat
-                ipsum voluptatem aliquid dolores illum? Corporis iusto laborum aspernatur dignissimos ex consectetur
-                excepturi
-                dolores.
-                <button>get start</button>
-            </div>
-        </div>
 
-    </section>
+                <AppGetStartToday />
 
-    <section class="video_section">
-        <div class="center_container">
-            <div class="video">
-                <img src="#" alt="play">
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-
-        <div class="center_container">
-            <div class="handwrite_blu">Testimonials</div>
-
-            <h1>Why people love me?</h1>
-
-            <div class="carousel">
-                <div card="card_carousel">
-                    <h1>Titolo</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis distinctio
-                        nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at voluptatibus,
-                        aspernatur neque veniam. Ullam?
-                    </p>
-                    <div>
-                        utente info
+                <section class="video_section">
+                    <div class="center_container">
+                        <div class="video">
+                            <img src="#" alt="play">
+                        </div>
                     </div>
-                </div>
-                <div card="card_carousel active">
-                    <h1>Titolo</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis distinctio
-                        nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at voluptatibus,
-                        aspernatur neque veniam. Ullam?
-                    </p>
-                    <div>
-                        utente info
+                </section>
+
+                <section class="testimonials">
+
+                    <div class="center_container">
+                        <div class="handwrite_blu">Testimonials</div>
+
+                        <h1>Why people love me?</h1>
+
+                        <div class="carousel">
+                            <div card="card_carousel">
+                                <h1>Titolo</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
+                                    distinctio
+                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
+                                    voluptatibus,
+                                    aspernatur neque veniam. Ullam?
+                                </p>
+                                <div>
+                                    utente info
+                                </div>
+                            </div>
+                            <div card="card_carousel active">
+                                <h1>Titolo</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
+                                    distinctio
+                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
+                                    voluptatibus,
+                                    aspernatur neque veniam. Ullam?
+                                </p>
+                                <div>
+                                    utente info
+                                </div>
+                            </div>
+                            <div card="card_carousel">
+                                <h1>Titolo</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
+                                    distinctio
+                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
+                                    voluptatibus,
+                                    aspernatur neque veniam. Ullam?
+                                </p>
+                                <div>
+                                    utente info
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div> puntini </div>
                     </div>
-                </div>
-                <div card="card_carousel">
-                    <h1>Titolo</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis distinctio
-                        nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at voluptatibus,
-                        aspernatur neque veniam. Ullam?
-                    </p>
-                    <div>
-                        utente info
+
+                </section>
+
+                <section class="courses_list">
+                    <div class="center_container">
+                        <div class="handwrite_blu">Artist Coaching</div>
+                        <h1>titolo</h1>
+                        <ul>
+                            <li> card dei corse</li>
+                        </ul>
+                        <button class="buttonlight">
+                            view all courses
+                        </button>
                     </div>
-                </div>
+                </section>
 
+                <section class="from_blog">
+                    <div class="center_container">
+                        <div class="handwrite_blu">Articols and Tips</div>
+                        <div>lato sinistro</div>
+                        <div>big</div>
+                        <div>lato destro</div>
+                    </div>
+                </section>
+
+                <section class="upcoming_events">
+                    <div class="center_container">
+                        <div class="handwrite_blu">Upcoming Events</div>
+                        <h1>titolo</h1>
+                        <div>
+                            <div class="card_events">
+                                card evento
+                            </div>
+                            <div class="card_events">
+                                card evento
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card_events">
+                                card evento
+                            </div>
+                            <div class="card_events">
+                                card evento
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <AppNewsletter />
 
             </div>
-            <div> puntini </div>
         </div>
 
-    </section>
-
-    <section class="courses_list">
-        <div class="center_container">
-            <div class="handwrite_blu">Artist Coaching</div>
-            <h1>titolo</h1>
-            <ul>
-                <li> card dei corse</li>
-            </ul>
-            <button>
-                view all courses
-            </button>
-        </div>
-    </section>
-
-    <section class="from_blog">
-        <div class="center_container">
-            <div class="handwrite_blu">Articols and Tips</div>
-            <div>lato sinistro</div>
-            <div>big</div>
-            <div>lato destro</div>
-        </div>
-    </section>
-
-    <section class="upcoming_events">
-        <div class="center_container">
-            <div class="handwrite_blu">Upcoming Events</div>
-            <h1>titolo</h1>
-            <div>
-                <div class="card_events">
-                    card evento
-                </div>
-                <div class="card_events">
-                    card evento
-                </div>
-            </div>
-            <div>
-                <div class="card_events">
-                    card evento
-                </div>
-                <div class="card_events">
-                    card evento
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <AppNewsletter />
+    </main>
 </template>
 
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
 @use './../styles/debug.scss' as *;
+
+main {
+    .background {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img.shape_03 {
+            width: 100%;
+            position: absolute;
+            top: 100px;
+            left: 0;
+        }
+    }
+
+
+
+    .content {
+        position: relative;
+        z-index: 90000;
+
+        section {
+            padding: 50px 0;
+
+        }
+
+    }
+}
 
 
 // GETSTARTER SECTION
