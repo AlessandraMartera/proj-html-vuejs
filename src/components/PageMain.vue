@@ -2,6 +2,7 @@
 import AppNewsletter from './AppNewsletter.vue';
 import AppHelpYou from './AppHelpYou.vue';
 import AppGetStartToday from './AppGetStartToday.vue';
+import AppVideo from './AppVideo.vue'
 
 export default {
     name: 'PageMain',
@@ -9,6 +10,7 @@ export default {
         AppHelpYou,
         AppNewsletter,
         AppGetStartToday,
+        AppVideo,
     },
 }
 </script>
@@ -17,24 +19,14 @@ export default {
     <main>
         <div class="background">
 
-
             <img class="shape_03" src="background/maxcoach-shape-14-1536x343.png" alt="">
-
 
 
             <div class="content">
                 <AppHelpYou />
-
-
                 <AppGetStartToday />
 
-                <section class="video_section">
-                    <div class="center_container">
-                        <div class="video">
-                            <img src="#" alt="play">
-                        </div>
-                    </div>
-                </section>
+                <AppVideo />
 
                 <section class="testimonials">
 
@@ -175,29 +167,10 @@ main {
 
 
 // GETSTARTER SECTION
-.get_start_today .center_container {
-    display: flex;
 
-    div {
-        width: 50%;
-    }
-}
 
 // VIDEO
-.video_section .center_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .video {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 80%;
-        background-color: blue;
-    }
-}
 
 // TESTIMONIAL
 .carousel {
