@@ -2,7 +2,8 @@
 import AppNewsletter from './AppNewsletter.vue';
 import AppHelpYou from './AppHelpYou.vue';
 import AppGetStartToday from './AppGetStartToday.vue';
-import AppVideo from './AppVideo.vue'
+import AppVideo from './AppVideo.vue';
+import AppCarousel from './AppCarousel.vue';
 
 export default {
     name: 'PageMain',
@@ -11,6 +12,7 @@ export default {
         AppNewsletter,
         AppGetStartToday,
         AppVideo,
+        AppCarousel,
     },
 }
 </script>
@@ -24,6 +26,7 @@ export default {
 
             <div class="content">
                 <AppHelpYou />
+
                 <AppGetStartToday />
 
                 <AppVideo />
@@ -35,47 +38,7 @@ export default {
 
                         <h1>Why people love me?</h1>
 
-                        <div class="carousel">
-                            <div card="card_carousel">
-                                <h1>Titolo</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
-                                    distinctio
-                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
-                                    voluptatibus,
-                                    aspernatur neque veniam. Ullam?
-                                </p>
-                                <div>
-                                    utente info
-                                </div>
-                            </div>
-                            <div card="card_carousel active">
-                                <h1>Titolo</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
-                                    distinctio
-                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
-                                    voluptatibus,
-                                    aspernatur neque veniam. Ullam?
-                                </p>
-                                <div>
-                                    utente info
-                                </div>
-                            </div>
-                            <div card="card_carousel">
-                                <h1>Titolo</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
-                                    distinctio
-                                    nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
-                                    voluptatibus,
-                                    aspernatur neque veniam. Ullam?
-                                </p>
-                                <div>
-                                    utente info
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div> puntini </div>
+                        <AppCarousel />
                     </div>
 
                 </section>
@@ -124,6 +87,7 @@ export default {
                         </div>
                     </div>
                 </section>
+
                 <AppNewsletter />
 
             </div>

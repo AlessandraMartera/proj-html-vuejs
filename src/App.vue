@@ -11,7 +11,7 @@ export default {
     PageFooter
 
   },
-  // star data
+  // store data
   data() {
     return {
       store

@@ -1,27 +1,38 @@
 <script>
+import { store } from './../store'
 
 export default {
   name: 'PageHeader',
+  // store data
+  data() {
+    return {
+      store
+    };
+  }
 
 }
 </script>
 
 <template>
   <header>
-    <!-- coutdown event -->
-    <nav>
-      <!-- logo -->
+  <!-- coutdown event -->
+  <nav>
+    <!-- logo -->
       <div class="logo">
         <img src="dark-logo.png" alt="">
       </div>
       <!-- links list -->
       <ul>
-        <li>Home <i class="fa-solid fa-angle-down"></i></li>
-        <li>Pages <i class="fa-solid fa-angle-down"></i></li>
-        <li>boh <i class="fa-solid fa-angle-down"></i></li>
-        <li>boh <i class="fa-solid fa-angle-down"></i></li>
-        <li>boh <i class="fa-solid fa-angle-down"></i></li>
-        <li>boh <i class="fa-solid fa-angle-down"></i></li>
+        <li v-for="nameLinks in store.linksHader">
+          <a href="http://#">
+            {{ nameLinks }} <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <!-- <li>Pages <i class="fa-solid fa-angle-down"></i></li>
+                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
+                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
+                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
+                    <li>boh <i class="fa-solid fa-angle-down"></i></li> -->
       </ul>
 
       <!-- icons -->
@@ -77,7 +88,7 @@ nav {
   }
 
   ul {
-    gap: 5px;
+    gap: 30px;
 
     i {
       font-size: 0.8rem;
