@@ -1,61 +1,114 @@
 <script >
-
+import { store } from './../store';
 export default {
-    name: 'AppCarousel'
+    name: 'AppCarousel',
+    // store data
+    data() {
+        return {
+            store
+        };
+    }
 }
 
 </script>
 
 <template>
     <div class="carousel">
-        <div card="card_carousel">
-            <h1>High level of efficiency and scientific teaching methods</h1>
+
+        <!-- card -->
+        <div v-for="(testimonial, idx) in store.testimonials"
+            :class="(idx === store.testimonialsActiveCard) ? 'card_carousel active' : 'card_carousel'">
+            <!-- comment -->
+            <h4>{{ testimonial.title }}</h4>
             <p>
-                I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the
-                syllabus. Great study portal for peaple like me.
+                {{ testimonial.text }}
             </p>
-            <div>
-                <img src="testimonials/artist-testimonial-avatar-04.jpg" alt="">
+
+            <!-- user info  -->
+            <div class="user_info">
+                <img :src="testimonial.userInfo.immage" alt="">
                 <div>
-                    <h3>Mina Hollace</h3>
-                    <span>Freelancer</span>
+                    <h4>{{ testimonial.userInfo.name }}</h4>
+                    <span> / {{ testimonial.userInfo.job }}</span>
                 </div>
             </div>
         </div>
 
 
-        <div card="card_carousel active">
-            <h1>Titolo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
-                distinctio
-                nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
-                voluptatibus,
-                aspernatur neque veniam. Ullam?
-            </p>
-            <div>
-                utente info
-            </div>
-        </div>
-        <div card="card_carousel">
-            <h1>Titolo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quas expedita. Qui quis
-                distinctio
-                nesciunt non perspiciatis! Officiis ut voluptatem sunt magni error distinctio at
-                voluptatibus,
-                aspernatur neque veniam. Ullam?
-            </p>
-            <div>
-                utente info
-            </div>
-        </div>
-
-
     </div>
-    <div> puntini </div>
+
+
+    <div v-for="(n, idx) in store.testimonials" :class="(idx === store.testimonialsActiveCard) ? 'dot active' : 'dot'">
+    </div>
+
+
+    <!-- <div><span class="dot"><i class="fa-sharp fa-solid fa-circle-small"></i></span></div> -->
 </template>
 
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-@use './../styles/debug.scss' as *;
+// @use './../styles/debug.scss' as *;
+
+.carousel {
+    display: flex;
+    justify-content: center;
+
+
+    .card_carousel {
+        background-color: $white;
+        opacity: 0.2;
+        margin: 20px;
+        padding: 50px;
+        color: $gray;
+        text-align: start;
+        border-radius: 5px;
+        font-size: 16px;
+
+        p {
+            margin: 35px 0;
+        }
+
+        h4 {
+            color: $black;
+        }
+
+        .user_info {
+            display: flex;
+            font-size: 12px;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 100px;
+                margin-right: 30px;
+            }
+        }
+
+
+    }
+
+    .active {
+        opacity: 1;
+    }
+}
+
+.dot {
+    display: inline-block;
+    border-radius: 100px;
+    height: 10px;
+    width: 10px;
+    margin-left: 15px;
+    background-color: $black;
+    opacity: 0.3;
+}
+
+.dot.active {
+    opacity: 1;
+    scale: 1.3;
+}
 </style>

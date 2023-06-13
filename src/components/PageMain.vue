@@ -35,12 +35,10 @@ export default {
 
                     <div class="center_container">
                         <div class="handwrite_blu">Testimonials</div>
-
                         <h1>Why people love me?</h1>
-
-                        <AppCarousel />
                     </div>
 
+                    <AppCarousel />
                 </section>
 
                 <section class="courses_list">
@@ -99,7 +97,7 @@ export default {
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-@use './../styles/debug.scss' as *;
+// @use './../styles/debug.scss' as *;
 
 main {
     .background {
@@ -136,8 +134,9 @@ main {
 // VIDEO
 
 
-// TESTIMONIAL
-.carousel {
-    display: flex;
+// TESTIMONIAl
+.testimonials {
+    background-color: $lightgray;
+    text-align: center;
 }
 </style>

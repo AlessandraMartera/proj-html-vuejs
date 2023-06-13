@@ -60,11 +60,12 @@ export const store = reactive({
             numeberStudent: 50,
         }
     ],
-    tesimonials: [
+    testimonialsActiveCard: 1,
+    testimonials: [
 
         {
             userInfo: {
-                immage: 'artist-testimonial-avatar-02.jpg',
+                immage: 'testimonials/artist-testimonial-avatar-02.jpg',
                 name: 'Florence Themes',
                 job: 'Multimedia Admin'
             },
@@ -73,7 +74,7 @@ export const store = reactive({
         },
         {
             userInfo: {
-                immage: 'artist-testimonial-avatar-04.jpg',
+                immage: 'testimonials/artist-testimonial-avatar-04.jpg',
                 name: 'Mina Hollace',
                 job: 'Freelancer'
             },
@@ -82,7 +83,7 @@ export const store = reactive({
         },
         {
             userInfo: {
-                immage: 'artist-testimonial-avatar-01.jpg',
+                immage: 'testimonials/artist-testimonial-avatar-01.jpg',
                 name: 'Madley Pondor',
                 job: 'IT Specialist'
             },

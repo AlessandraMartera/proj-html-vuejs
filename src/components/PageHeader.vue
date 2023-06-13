@@ -1,8 +1,11 @@
 <script>
 import { store } from './../store'
-
+import countdownEvents from './countdownEvents.vue';
 export default {
   name: 'PageHeader',
+  components: {
+    countdownEvents,
+  },
   // store data
   data() {
     return {
@@ -15,9 +18,11 @@ export default {
 
 <template>
   <header>
-  <!-- coutdown event -->
-  <nav>
-    <!-- logo -->
+
+    <!-- coutdown event -->
+    <countdownEvents />
+    <nav>
+      <!-- logo -->
       <div class="logo">
         <img src="dark-logo.png" alt="">
       </div>
@@ -28,11 +33,7 @@ export default {
             {{ nameLinks }} <i class="fa-solid fa-angle-down"></i>
           </a>
         </li>
-        <!-- <li>Pages <i class="fa-solid fa-angle-down"></i></li>
-                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
-                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
-                    <li>boh <i class="fa-solid fa-angle-down"></i></li>
-                    <li>boh <i class="fa-solid fa-angle-down"></i></li> -->
+
       </ul>
 
       <!-- icons -->
