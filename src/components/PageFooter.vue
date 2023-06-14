@@ -1,73 +1,78 @@
 <script >
-
+import { store } from './../store.js'
 
 export default {
-    name: 'PageFooter'
+    name: 'PageFooter',
+    // store data
+    data() {
+        return {
+            store
+        };
+    }
 }
 </script>
 
 <template>
     <footer>
-        <div class="center_container">
 
-            <div class="row_container">
-                <!-- Andress Col -->
+
+        <div class="row_container">
+            <!-- Andress Col -->
+            <div class="col">
+                <h3>
+                    Address
+                </h3>
                 <div>
-                    <h3>
-                        Address
-                    </h3>
-                    <div>382 NE 19!st St# 8739 Miami, Fl 33279-3899</div>
-                    <div>+1(305) 547-9909 (9am - 5pm EST, Monday - Friday)</div>
-                    <div>support@maxcoach.com</div>
-                    <div class="icons">
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                    </div>
-
+                    {{ store.footer.address }} <br>
+                    {{ store.footer.tel }} <br>
+                    {{ store.footer.email }} <br>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </div>
 
-                <!-- Explore Col -->
-                <div>
-                    <ul>
-                        <li>
-                            <h3>Explore</h3>
-                        </li>
-                        <li><a href="#">Start here</a> </li>
-                        <li><a href="#">Success story</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Information Col -->
-                <div>
-                    <ul>
-                        <li>
-                            <h3>Information</h3>
-                        </li>
-                        <li><a href="#">Membership</a></li>
-                        <li><a href="#">Purchase guide</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms of services</a></li>
-                    </ul>
-                </div>
-
-                <!-- Istagram Col -->
-                <div>
-                    <h3>Instagram <a class="orange" href="#">@maxcoach</a> <span></span></h3>
-                    <div>
-                        <img src="footer/120084500_197897808368764_8114555493043279565_n.jpg" alt="">
-                        <img src="footer/120012142_177596140500760_8623485824101406058_n.jpg" alt="">
-                        <img src="footer/120099363_364334431619755_7198812647386067017_n.jpg" alt="">
-                    </div>
-                </div>
             </div>
 
-            <div class="copywrite">@ 2020 Maxcoach. All Rights Reserved</div>
+            <!-- Explore Col -->
+
+            <ul>
+                <li>
+                    <h3>Explore</h3>
+                </li>
+
+                <li><a href="#">Start here</a> </li>
+                <li><a href="#">Success story</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <!-- Information Col -->
+            <ul>
+                <li>
+                    <h3>Information</h3>
+                </li>
+
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Purchase guide</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of services</a></li>
+            </ul>
+
+
+            <!-- Istagram Col -->
+            <div class="col">
+                <h3>Instagram <a class="orange" href="#">{{ store.footer.instagram.name }}</a> <span></span></h3>
+                <div>
+                    <img v-for="immage in store.footer.instagram.immages" :src="immage" alt="">
+                </div>
+            </div>
         </div>
+
+        <div class="copywrite">@ 2020 Maxcoach. All Rights Reserved</div>
+
 
 
         <a href="#">
@@ -84,60 +89,67 @@ export default {
 footer {
     font-family: 'Varela Round', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     height: 400px;
     background-color: $white;
     position: relative;
 
     .central_container {
-        width: 90%;
+        width: 100%;
+
     }
 
     .row_container {
+        width: 80%;
+        height: 300px;
         display: flex;
         justify-content: space-between;
-        margin: 100px 0;
+        gap: 20px;
+        margin: 100px auto;
         color: #949494;
+        line-height: 30px;
 
 
-
-        div {
-            font-size: 14px;
-            line-height: 40px;
-
-
-            h3 {
-                color: $black;
-                margin-bottom: 20px;
-            }
+        .col {
+            width: calc((100% / 3) - 20px);
+            // font-size: 14px;
 
 
-            .icons i {
-                font-size: 1.6rem;
-                margin-right: 1.5rem;
-                color: #b4b4b4;
-            }
-
-            ul {
-                display: inline-block;
-
-                li {
-                    line-height: 30px;
-
-
-
-                    a {
-                        color: #949494;
-                    }
-                }
-            }
-
-            img {
-                width: 120px;
-                height: 120px;
-                margin-right: 20px;
+            div {
+                margin: 20px 0;
             }
         }
+
+        h3 {
+            color: $black;
+            margin-bottom: 20px;
+        }
+
+        .icons i {
+            font-size: 1.6rem;
+            margin-right: 1.5rem;
+            color: #b4b4b4;
+        }
+
+        ul {
+            display: inline-block;
+
+            li {
+
+
+
+                a {
+                    color: #949494;
+                }
+            }
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            margin-right: 14px;
+        }
+
 
 
     }
@@ -160,7 +172,5 @@ footer {
         right: 40px;
         bottom: 40px;
     }
-
-
 }
 </style>
