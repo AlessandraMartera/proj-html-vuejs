@@ -6,6 +6,7 @@ import AppVideo from './AppVideo.vue';
 import AppCarousel from './AppCarousel.vue';
 import AppCoursesList from './AppCoursesList.vue';
 import AppArticols from './AppArticols.vue';
+import AppEvents from './AppEvents.vue';
 
 export default {
     name: 'PageMain',
@@ -17,6 +18,7 @@ export default {
         AppCarousel,
         AppCoursesList,
         AppArticols,
+        AppEvents,
     },
 }
 </script>
@@ -49,28 +51,7 @@ export default {
 
                 <AppArticols />
 
-                <section class="upcoming_events">
-                    <div class="center_container">
-                        <div class="handwrite_blu">Upcoming Events</div>
-                        <h1>titolo</h1>
-                        <div>
-                            <div class="card_events">
-                                card evento
-                            </div>
-                            <div class="card_events">
-                                card evento
-                            </div>
-                        </div>
-                        <div>
-                            <div class="card_events">
-                                card evento
-                            </div>
-                            <div class="card_events">
-                                card evento
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <AppEvents />
 
                 <AppNewsletter />
 
