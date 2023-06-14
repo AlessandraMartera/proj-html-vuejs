@@ -94,6 +94,7 @@ main {
 
 // TESTIMONIAl
 .testimonials {
+    padding: 80px;
     background-color: $lightgray;
     text-align: center;
 }

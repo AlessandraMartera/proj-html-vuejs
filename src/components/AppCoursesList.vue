@@ -21,24 +21,33 @@ export default {
 <template>
     <section class="courses">
 
-        <div class="center_container">
+        <div class="background">
 
-            <!-- title -->
-            <div class="handwrite_blu">Artist Coaching</div>
-            <h1>Latest online Courses</h1>
+            <img class="shape_01" src="background/artist-shape-01.png" alt="">
 
-            <!-- courses list -->
-            <ul class="courses_list">
+            <div class="content">
+                <div class="center_container">
 
-                <!-- single card list -->
-                <CoursesCard />
-            </ul>
+                    <!-- title -->
+                    <div class="handwrite_blu">Artist Coaching</div>
+                    <h1>Latest online Courses</h1>
 
-            <!-- button for all courses -->
-            <button class="buttonlight">
-                view all courses <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
+                    <!-- courses list -->
+                    <ul class="courses_list">
+
+                        <!-- single card list -->
+                        <CoursesCard />
+                    </ul>
+
+                    <!-- button for all courses -->
+                    <button class="buttonlight">
+                        view all courses <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </div>
         </div>
+
+
     </section>
 </template>
 
@@ -49,6 +58,7 @@ export default {
 
 .courses {
     text-align: center;
+    padding: 80px 0;
 
     .courses_list {
         margin: 20px 0;
@@ -56,6 +66,14 @@ export default {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
+    }
+
+    .shape_01 {
+        position: absolute;
+        top: 200px;
+        left: -500px;
+        transform: rotate(30deg);
+
     }
 }
 </style>
