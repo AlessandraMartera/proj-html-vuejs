@@ -1,9 +1,14 @@
 <script >
-
+import { store } from './../store'
 export default {
-    name: 'AppEvents'
-}
+    name: 'AppEvents',
 
+    data() {
+        return {
+            store
+        }
+    }
+}
 </script>
 
 <template>
@@ -16,43 +21,44 @@ export default {
 
             <div class="events_list">
                 <div class="card_events">
-                    <img src="events/artist-event-04-250x300.jpg" alt="">
+                    <img :src="store.events[0].immage" alt="">
                     <div class="info">
-                        <span class="date"> NOV 22, 2020</span>
-                        <h4>Storytelling workshop</h4>
-                        <span class="where"> <i class="fa-solid fa-location-dot"></i> Texas, US</span>
+                        <span class="date"> {{ store.events[0].date }}</span>
+                        <h4>{{ store.events[0].title }}</h4>
+                        <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[0].where }}</span>
                     </div>
                 </div>
 
                 <div class="card_events">
-                    <img src="events/artist-event-04-250x300.jpg" alt="">
+                    <img :src="store.events[1].immage" alt="">
                     <div class="info">
-                        <span class="date"> NOV 22, 2020</span>
-                        <h4>Storytelling workshop</h4>
-                        <span class="where"> <i class="fa-solid fa-location-dot"></i> Texas, US</span>
+                        <span class="date"> {{ store.events[1].date }}</span>
+                        <h4>{{ store.events[1].title }}</h4>
+                        <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[1].where }}</span>
                     </div>
                 </div>
-            </div>
+
+                <div class="card_events odd_row">
+                    <img :src="store.events[2].immage" alt="">
+                    <div class="info">
+                        <span class="date"> {{ store.events[2].date }}</span>
+                        <h4>{{ store.events[2].title }}</h4>
+                        <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[2].where }}</span>
+                    </div>
+                </div>
+
+                <div class="card_events odd_row">
+                    <img :src="store.events[3].immage" alt="">
+                    <div class="info">
+                        <span class="date"> {{ store.events[3].date }}</span>
+                        <h4>{{ store.events[3].title }}</h4>
+                        <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[3].where }}</span>
+                    </div>
+                </div>
 
 
-            <div>
-                <div class="card_events odd_row">
-                    <img src="events/artist-event-04-250x300.jpg" alt="">
-                    <div class="info">
-                        <span class="date"> NOV 22, 2020</span>
-                        <h4>Storytelling workshop</h4>
-                        <span class="where"> <i class="fa-solid fa-location-dot"></i> Texas, US</span>
-                    </div>
-                </div>
-                <div class="card_events odd_row">
-                    <img src="events/artist-event-04-250x300.jpg" alt="">
-                    <div class="info">
-                        <span class="date"> NOV 22, 2020</span>
-                        <h4>Storytelling workshop</h4>
-                        <span class="where"> <i class="fa-solid fa-location-dot"></i> Texas, US</span>
-                    </div>
-                </div>
             </div>
+
         </div>
     </section>
 </template>
@@ -75,6 +81,7 @@ export default {
     width: calc(50% - 40px);
     display: inline-flex;
     gap: 50px;
+    text-align: start;
 
     img {
         width: calc(55% - 50px);

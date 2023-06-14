@@ -15,8 +15,6 @@ export const store = reactive({
             immages: ['footer/120084500_197897808368764_8114555493043279565_n.jpg', 'footer/120012142_177596140500760_8623485824101406058_n.jpg', 'footer/120099363_364334431619755_7198812647386067017_n.jpg'],
         }
     },
-
-    // ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
     Courses: [
         {
             img: 'courses/artist-course-08-480x480.jpg',
@@ -105,5 +103,32 @@ export const store = reactive({
             title: "Professional team of specialists and passionate mentors at reach",
             text: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when deadling with students.",
         },
+    ],
+    layoutEvents: 0,
+    events: [
+        {
+            immage: 'events/artist-event-04-250x300.jpg',
+            date: 'NOV 22, 2020',
+            title: 'Storytelling Workshop',
+            where: 'Texas, US'
+        },
+        {
+            immage: 'events/artist-event-03-250x300.jpg',
+            date: 'OCT 10, 2020',
+            title: 'Painting Art Contest 2020',
+            where: 'New york, US'
+        },
+        {
+            immage: 'events/artist-event-02-250x300.jpg',
+            date: 'Nov 23, 2020',
+            title: 'Internationel Art Fair 2020',
+            where: 'Hamburg, Germany'
+        },
+        {
+            immage: 'events/artist-event-01-250x300.jpg',
+            date: 'DEC 15, 2020',
+            title: 'Street Performance: CAll For Artist',
+            where: 'Illinois, US'
+        }
     ]
 });
