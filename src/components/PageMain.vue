@@ -5,6 +5,8 @@ import AppGetStartToday from './AppGetStartToday.vue';
 import AppVideo from './AppVideo.vue';
 import AppCarousel from './AppCarousel.vue';
 import AppCoursesList from './AppCoursesList.vue';
+import AppArticols from './AppArticols.vue';
+
 export default {
     name: 'PageMain',
     components: {
@@ -14,6 +16,7 @@ export default {
         AppVideo,
         AppCarousel,
         AppCoursesList,
+        AppArticols,
     },
 }
 </script>
@@ -44,14 +47,7 @@ export default {
 
                 <AppCoursesList />
 
-                <section class="from_blog">
-                    <div class="center_container">
-                        <div class="handwrite_blu">Articols and Tips</div>
-                        <div>lato sinistro</div>
-                        <div>big</div>
-                        <div>lato destro</div>
-                    </div>
-                </section>
+                <AppArticols />
 
                 <section class="upcoming_events">
                     <div class="center_container">
@@ -116,12 +112,6 @@ main {
 
     }
 }
-
-
-// GETSTARTER SECTION
-
-
-// VIDEO
 
 
 // TESTIMONIAl

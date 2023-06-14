@@ -1,6 +1,7 @@
 <script >
 import { store } from './../store.js'
 import CoursesCard from './CoursesCard.vue';
+
 export default {
     name: 'AppCoursesList',
     components: {
@@ -26,12 +27,14 @@ export default {
             <div class="handwrite_blu">Artist Coaching</div>
             <h1>Latest online Courses</h1>
 
+            <!-- courses list -->
             <ul class="courses_list">
 
+                <!-- single card list -->
                 <CoursesCard />
-
             </ul>
 
+            <!-- button for all courses -->
             <button class="buttonlight">
                 view all courses <i class="fa-solid fa-arrow-right-long"></i>
             </button>
@@ -42,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-@use './../styles/debug.scss' as *;
+
 
 .courses {
     text-align: center;
@@ -54,7 +57,6 @@ export default {
         gap: 10px;
         flex-wrap: wrap;
     }
-
 }
 </style>
 

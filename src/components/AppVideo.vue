@@ -14,7 +14,6 @@ export default {
                 <div class="circle_orange"></div>
             </div>
 
-
         </div>
     </section>
 </template>
@@ -22,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-@use './../styles/debug.scss' as *;
+
 
 .video_section .center_container {
     height: fit-content;

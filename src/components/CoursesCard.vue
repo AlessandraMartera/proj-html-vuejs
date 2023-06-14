@@ -20,22 +20,20 @@ export default {
         <img :src="course.img" alt="">
         <div class="courses_info">
             <!-- price -->
-            <div class="orange">$ 18.00</div>
+            <div class="orange"> $ {{ course.price }}</div>
             <!-- title -->
-            <h4>The acrylic Painting Academy</h4>
+            <h4>{{ course.name }}</h4>
             <!-- info -->
-            <span><i class="fa-regular fa-file-lines"></i> 4 Lessons</span>
-            <span><i class="fa-regular fa-user"></i> 50 Students </span>
+            <span><i class="fa-regular fa-file-lines"></i> {{ course.numberLessons }} Lessons</span>
+            <span><i class="fa-regular fa-user"></i> {{ course.numeberStudent }} Students </span>
         </div>
-
-
     </li>
 </template>
 
 <style lang="scss" scoped>
 @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
-@use './../styles/debug.scss' as *;
+
 
 .courses_card {
     width: calc((100% / 4) - 10px);
@@ -47,21 +45,26 @@ export default {
     }
 
     .courses_info {
-        padding: 20px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        font-size: 16px;
+        padding: 18px;
         width: 90%;
         border: 2px solid $white;
 
         div {
-            margin-bottom: 10px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
         h4 {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: $black;
         }
 
         span {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 14px;
             margin: 0 10px;
         }
