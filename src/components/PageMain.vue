@@ -25,38 +25,35 @@ export default {
 
 <template>
     <main>
-        <div class="background">
-
-            <img class="shape_03" src="background/maxcoach-shape-14-1536x343.png" alt="">
 
 
-            <div class="content">
-                <AppHelpYou />
 
-                <AppGetStartToday />
+        <AppHelpYou />
 
-                <AppVideo />
+        <AppGetStartToday />
 
-                <section class="testimonials">
+        <AppVideo />
 
-                    <div class="center_container">
-                        <div class="handwrite_blu">Testimonials</div>
-                        <h1>Why people love me?</h1>
-                    </div>
+        <section class="testimonials">
 
-                    <AppCarousel />
-                </section>
-
-                <AppCoursesList />
-
-                <AppArticols />
-
-                <AppEvents />
-
-                <AppNewsletter />
-
+            <div class="center_container">
+                <div class="handwrite_blu">Testimonials</div>
+                <h1>Why people love me?</h1>
             </div>
-        </div>
+
+            <AppCarousel />
+        </section>
+
+        <AppCoursesList />
+
+        <AppArticols />
+
+        <AppEvents />
+
+        <AppNewsletter />
+
+
+
 
     </main>
 </template>
