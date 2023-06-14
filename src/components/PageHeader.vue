@@ -1,16 +1,13 @@
 <script>
-import { store } from './../store'
 import countdownEvents from './countdownEvents.vue';
+
 export default {
   name: 'PageHeader',
   components: {
     countdownEvents,
   },
-  // store data
-  data() {
-    return {
-      store
-    };
+  props: {
+    header: Object
   }
 
 }
@@ -24,11 +21,11 @@ export default {
     <nav>
       <!-- logo -->
       <div class="logo">
-        <img src="dark-logo.png" alt="">
+        <img :src="header.logo" alt="">
       </div>
       <!-- links list -->
       <ul>
-        <li v-for="nameLinks in store.linksHader">
+        <li v-for="nameLinks in header.links ">
           <a href="http://#">
             {{ nameLinks }} <i class="fa-solid fa-angle-down"></i>
           </a>
@@ -70,7 +67,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// @use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
 
 // DEBUG

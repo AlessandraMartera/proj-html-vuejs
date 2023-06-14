@@ -1,13 +1,9 @@
 <script >
-import { store } from './../store.js'
 
 export default {
     name: 'PageFooter',
-    // store data
-    data() {
-        return {
-            store
-        };
+    props: {
+        footer: Object
     }
 }
 </script>
@@ -23,9 +19,9 @@ export default {
                     Address
                 </h3>
                 <div>
-                    {{ store.footer.address }} <br>
-                    {{ store.footer.tel }} <br>
-                    {{ store.footer.email }} <br>
+                    {{ footer.address }} <br>
+                    {{ footer.tel }} <br>
+                    {{ footer.email }} <br>
                 </div>
                 <div class="icons">
                     <i class="fa-brands fa-twitter"></i>
@@ -64,10 +60,10 @@ export default {
 
             <!-- Istagram Col -->
             <div class="col">
-                <h3>Instagram <a class="orange" href="#">{{ store.footer.instagram.name }}</a> <span></span></h3>
-                <div>
-                    <img v-for="immage in store.footer.instagram.immages" :src="immage" alt="">
-                </div>
+                <h3>Instagram <a class="orange" href="#">{{ footer.instagram.name }}</a></h3>
+
+                <img v-for="immage in footer.instagram.immages" :src="immage" :alt="immage">
+
             </div>
         </div>
 

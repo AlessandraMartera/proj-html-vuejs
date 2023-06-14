@@ -22,12 +22,12 @@ export default {
 </script>
 
 <template>
-  <PageHeader />
-  <main>
-    <PageMain />
-  </main>
+  <PageHeader :header="store.header" />
 
-  <PageFooter />
+  <PageMain />
+
+
+  <PageFooter :footer="store.footer" />
 </template>
 
 <style lang="scss">

@@ -1,7 +1,22 @@
 import { reactive } from 'vue'
 
+
 export const store = reactive({
-    linksHader: ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
+    header: {
+        logo: 'dark-logo.png',
+        links: ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
+    },
+    footer: {
+        address: '382 NE 19!st St# 8739 Miami, Fl 33279-3899',
+        tel: '+1(305) 547-9909 (9am - 5pm EST, Monday - Friday)',
+        email: 'support@maxcoach.com',
+        instagram: {
+            name: '@maxcoach',
+            immages: ['footer/120084500_197897808368764_8114555493043279565_n.jpg', 'footer/120012142_177596140500760_8623485824101406058_n.jpg', 'footer/120099363_364334431619755_7198812647386067017_n.jpg'],
+        }
+    },
+
+    // ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
     Courses: [
         {
             img: 'courses/artist-course-08-480x480.jpg',
