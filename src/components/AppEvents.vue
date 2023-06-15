@@ -7,7 +7,26 @@ export default {
         return {
             store
         }
-    }
+    },
+    // methods: {
+
+    // },
+    // computed: {
+    //     updateLayout() {
+    //         store.events.forEach(element => {
+    //             if (store.layoutEventsOdd === 3) {
+    //                 store.layoutEventsOdd = 0;
+
+    //             } else {
+    //                 store.layoutEventsOdd++;
+    //             }
+    //         });
+
+
+    //         console.log(store.layoutEventsOdd);
+    //     }
+    // }
+
 }
 </script>
 
@@ -28,45 +47,44 @@ export default {
 
 
                     <div class="events_list">
-                        <div class="card_events">
-                            <img :src="store.events[0].immage" alt="">
-                            <div class="info">
-                                <span class="date"> {{ store.events[0].date }}</span>
-                                <h4>{{ store.events[0].title }}</h4>
-                                <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[0].where
-                                }}</span>
+                        <div v-for="(event, idx) in (store.events.length / 2)"
+                            :class="(idx / 2 === 0) ? 'odd_row' : 'even_row'">
+
+                            <div v-if="(idx === 0)" class="card_events">
+                                <img :src="store.events[idx].immage" alt="">
+                                <div class="info">
+                                    <span class="date"> {{ store.events[idx].date }}</span>
+                                    <h4>{{ store.events[idx].title }}</h4>
+                                    <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[idx].where
+                                    }}</span>
+                                </div>
                             </div>
+
+                            <div v-else class="card_events">
+                                <img :src="store.events[idx + 2].immage" alt="">
+                                <div class="info">
+                                    <span class="date"> {{ store.events[idx + 2].date }}</span>
+                                    <h4>{{ store.events[idx + 2].title }}</h4>
+                                    <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[idx +
+                                        2].where
+                                    }}</span>
+                                </div>
+                            </div>
+
+                            <div class="card_events">
+                                <img :src="store.events[idx + 1].immage" alt="">
+                                <div class="info">
+                                    <span class="date"> {{ store.events[idx + 1].date }}</span>
+                                    <h4>{{ store.events[idx + 1].title }}</h4>
+                                    <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[idx +
+                                        1].where
+                                    }}</span>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="card_events">
-                            <img :src="store.events[1].immage" alt="">
-                            <div class="info">
-                                <span class="date"> {{ store.events[1].date }}</span>
-                                <h4>{{ store.events[1].title }}</h4>
-                                <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[1].where
-                                }}</span>
-                            </div>
-                        </div>
 
-                        <div class="card_events odd_row">
-                            <img :src="store.events[2].immage" alt="">
-                            <div class="info">
-                                <span class="date"> {{ store.events[2].date }}</span>
-                                <h4>{{ store.events[2].title }}</h4>
-                                <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[2].where
-                                }}</span>
-                            </div>
-                        </div>
-
-                        <div class="card_events odd_row">
-                            <img :src="store.events[3].immage" alt="">
-                            <div class="info">
-                                <span class="date"> {{ store.events[3].date }}</span>
-                                <h4>{{ store.events[3].title }}</h4>
-                                <span class="where"> <i class="fa-solid fa-location-dot"></i> {{ store.events[3].where
-                                }}</span>
-                            </div>
-                        </div>
 
 
                     </div>
@@ -90,6 +108,16 @@ export default {
 
     .events_list {
         margin: 70px 0;
+    }
+}
+
+.even_row {
+
+
+    .card_events {
+        flex-direction: row-reverse;
+
+        text-align: end;
     }
 }
 
@@ -119,10 +147,7 @@ export default {
 
 }
 
-.odd_row {
-    flex-direction: row-reverse;
-    text-align: end;
-}
+
 
 .stain {
     background-image: url('background/stain.svg');

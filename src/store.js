@@ -104,7 +104,6 @@ export const store = reactive({
             text: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when deadling with students.",
         },
     ],
-    layoutEvents: 0,
     events: [
         {
             immage: 'events/artist-event-04-250x300.jpg',
@@ -119,16 +118,16 @@ export const store = reactive({
             where: 'New york, US'
         },
         {
-            immage: 'events/artist-event-02-250x300.jpg',
-            date: 'Nov 23, 2020',
-            title: 'Internationel Art Fair 2020',
-            where: 'Hamburg, Germany'
-        },
-        {
             immage: 'events/artist-event-01-250x300.jpg',
             date: 'DEC 15, 2020',
             title: 'Street Performance: CAll For Artist',
             where: 'Illinois, US'
+        },
+        {
+            immage: 'events/artist-event-02-250x300.jpg',
+            date: 'Nov 23, 2020',
+            title: 'Internationel Art Fair 2020',
+            where: 'Hamburg, Germany'
         }
     ]
 });
